@@ -214,29 +214,37 @@ class GlobeVisualization {
     }
 
     createGlobe() {
-        // Globe sphere
+        // Globe sphere with Earth texture
         const geometry = new THREE.SphereGeometry(1, 64, 64);
+        const textureLoader = new THREE.TextureLoader();
 
-        // Create gradient material for globe
+        // Load earth textures
+        const earthTexture = textureLoader.load(
+            'https://unpkg.com/three-globe@2.24.13/example/img/earth-night.jpg',
+            () => this.renderer.render(this.scene, this.camera)
+        );
+        const bumpTexture = textureLoader.load(
+            'https://unpkg.com/three-globe@2.24.13/example/img/earth-topology.png'
+        );
+
         const material = new THREE.MeshPhongMaterial({
-            color: 0x1a1a24,
-            emissive: 0x0a0a0f,
-            specular: 0x333344,
-            shininess: 5,
-            transparent: true,
-            opacity: 0.95
+            map: earthTexture,
+            bumpMap: bumpTexture,
+            bumpScale: 0.02,
+            specular: new THREE.Color(0x222222),
+            shininess: 10
         });
 
         this.globe = new THREE.Mesh(geometry, material);
         this.scene.add(this.globe);
 
-        // Add wireframe overlay
-        const wireframeGeometry = new THREE.SphereGeometry(1.002, 36, 36);
+        // Add subtle wireframe overlay
+        const wireframeGeometry = new THREE.SphereGeometry(1.003, 48, 24);
         const wireframeMaterial = new THREE.MeshBasicMaterial({
-            color: 0x2a2a3a,
+            color: 0x00d4ff,
             wireframe: true,
             transparent: true,
-            opacity: 0.3
+            opacity: 0.08
         });
         this.wireframe = new THREE.Mesh(wireframeGeometry, wireframeMaterial);
         this.scene.add(this.wireframe);
@@ -267,19 +275,17 @@ class GlobeVisualization {
     }
 
     latLngToVector3(lat, lng, radius = 1.02) {
-        const phi = (90 - lat) * (Math.PI / 180);
-        const theta = (lng + 180) * (Math.PI / 180);
+        const latRad = lat * (Math.PI / 180);
+        const lngRad = -lng * (Math.PI / 180);
 
         return new THREE.Vector3(
-            -radius * Math.sin(phi) * Math.cos(theta),
-            radius * Math.cos(phi),
-            radius * Math.sin(phi) * Math.sin(theta)
+            radius * Math.cos(latRad) * Math.cos(lngRad),
+            radius * Math.sin(latRad),
+            radius * Math.cos(latRad) * Math.sin(lngRad)
         );
     }
 
     createMarkers() {
-        const markerGeometry = new THREE.SphereGeometry(0.025, 16, 16);
-
         stablecoinData.forEach((coin, index) => {
             // Size based on supply (logarithmic scale)
             const size = 0.02 + Math.log10(coin.supply) * 0.005;
@@ -317,7 +323,7 @@ class GlobeVisualization {
     addEventListeners() {
         window.addEventListener('resize', () => this.onResize());
         this.canvas.addEventListener('mousemove', (e) => this.onMouseMove(e));
-        this.canvas.addEventListener('mousedown', () => this.onMouseDown());
+        this.canvas.addEventListener('mousedown', (e) => this.onMouseDown(e));
         this.canvas.addEventListener('mouseup', () => this.onMouseUp());
         this.canvas.addEventListener('wheel', (e) => this.onWheel(e));
         this.canvas.addEventListener('mouseleave', () => this.hideTooltip());
@@ -379,7 +385,7 @@ class GlobeVisualization {
         }
     }
 
-    onMouseDown() {
+    onMouseDown(event) {
         this.isDragging = true;
         this.previousMouseX = event.clientX;
         this.previousMouseY = event.clientY;
