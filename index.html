@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Currency Stablecoins | Stablecoins Earth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🌍</span>
+                <span class="logo-text">stablecoins.earth</span>
+            </div>
+            <nav class="nav">
+                <a href="#about" class="nav-link">About</a>
+                <a href="https://github.com" class="nav-link" target="_blank">GitHub</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title">Local Currency Stablecoins</h1>
+            <p class="hero-subtitle">Bringing all countries' currencies onchain</p>
+        </section>
+
+        <!-- Globe Container -->
+        <div id="globe-container">
+            <canvas id="globe-canvas"></canvas>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stat-item">
+                <span class="stat-value" id="total-supply">$0</span>
+                <span class="stat-label">Total Supply</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="total-currencies">0</span>
+                <span class="stat-label">Currencies</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="total-countries">0</span>
+                <span class="stat-label">Countries</span>
+            </div>
+        </div>
+
+        <!-- Stablecoin List -->
+        <section class="stablecoin-section">
+            <h2 class="section-title">Stablecoins by Country</h2>
+            <div class="stablecoin-grid" id="stablecoin-list">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Tooltip -->
+        <div id="tooltip" class="tooltip">
+            <div class="tooltip-country"></div>
+            <div class="tooltip-symbol"></div>
+            <div class="tooltip-supply"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Data sourced from Solana blockchain | Powered by Artemis Analytics</p>
+            <p class="footer-note">Think a local currency stablecoin is missing? <a href="mailto:info@example.com">Let us know</a></p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
