@@ -21,6 +21,11 @@ This project visualizes stablecoins representing various countries' currencies, 
 
 | Symbol | Country | Currency |
 |--------|---------|----------|
+| USDC | United States | US Dollar (USD) |
+| USDT | United States | US Dollar (USD) |
+| PYUSD | United States | US Dollar (USD) |
+| USDС | United States | US Dollar (USD) |
+| USDY | United States | US Dollar (USD) |
 | EURC | European Union | Euro (EUR) |
 | BRZ | Brazil | Brazilian Real (BRL) |
 | GYEN | Japan | Japanese Yen (JPY) |
@@ -47,7 +52,8 @@ SELECT symbol, supply
 FROM pc_dbt_db.prod.agg_daily_stablecoin_breakdown_symbol_chain
 WHERE date_granularity = '2026-01-15'
   AND chain = 'solana'
-  AND symbol IN ('EURC', 'BRZ', 'GYEN', 'EUROe', 'IDRX', 'NGN',
+  AND symbol IN ('USDC', 'USDT', 'PYUSD', 'USDС', 'USDY',
+                 'EURC', 'BRZ', 'GYEN', 'EUROe', 'IDRX', 'NGN',
                  'ZARP', 'TRYB', 'MXNe', 'VGBP', 'VCHF', 'VEUR',
                  'GBPA', 'EURCV', 'KZTE', 'AUDD')
 ```

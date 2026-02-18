@@ -135,12 +135,12 @@ body {
 
 /* Stats Panel */
 .stats-panel {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
     padding: 2rem;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 1200px;
     position: relative;
     z-index: 10;
 }
@@ -265,6 +265,33 @@ body {
     color: var(--accent-success);
 }
 
+.stablecoin-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.metric-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metric-label {
+    font-size: 0.813rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.metric-value {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
 /* Tooltip */
 .tooltip {
     position: fixed;
@@ -301,6 +328,15 @@ body {
 .tooltip-supply {
     font-size: 0.875rem;
     color: var(--accent-success);
+    margin-bottom: 0.25rem;
+}
+
+.tooltip-transactions,
+.tooltip-addresses,
+.tooltip-volume {
+    font-size: 0.813rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
 }
 
 /* Footer */

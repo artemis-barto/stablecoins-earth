@@ -5,6 +5,9 @@ const stablecoinData = [
     {
         symbol: 'EURC',
         supply: 89500000,
+        transaction_count: 125000,
+        active_addresses: 8500,
+        transfer_volume: 245000000,
         country: 'European Union',
         currency: 'Euro',
         currencyCode: 'EUR',
@@ -15,6 +18,9 @@ const stablecoinData = [
     {
         symbol: 'BRZ',
         supply: 45200000,
+        transaction_count: 68000,
+        active_addresses: 4200,
+        transfer_volume: 128000000,
         country: 'Brazil',
         currency: 'Brazilian Real',
         currencyCode: 'BRL',
@@ -25,6 +31,9 @@ const stablecoinData = [
     {
         symbol: 'GYEN',
         supply: 32100000,
+        transaction_count: 52000,
+        active_addresses: 3100,
+        transfer_volume: 95000000,
         country: 'Japan',
         currency: 'Japanese Yen',
         currencyCode: 'JPY',
@@ -35,6 +44,9 @@ const stablecoinData = [
     {
         symbol: 'EUROe',
         supply: 15800000,
+        transaction_count: 28000,
+        active_addresses: 1800,
+        transfer_volume: 45000000,
         country: 'European Union',
         currency: 'Euro',
         currencyCode: 'EUR',
@@ -45,6 +57,9 @@ const stablecoinData = [
     {
         symbol: 'IDRX',
         supply: 8500000,
+        transaction_count: 15000,
+        active_addresses: 950,
+        transfer_volume: 22000000,
         country: 'Indonesia',
         currency: 'Indonesian Rupiah',
         currencyCode: 'IDR',
@@ -55,6 +70,9 @@ const stablecoinData = [
     {
         symbol: 'NGN',
         supply: 2100000,
+        transaction_count: 5200,
+        active_addresses: 320,
+        transfer_volume: 6500000,
         country: 'Nigeria',
         currency: 'Nigerian Naira',
         currencyCode: 'NGN',
@@ -65,6 +83,9 @@ const stablecoinData = [
     {
         symbol: 'ZARP',
         supply: 1850000,
+        transaction_count: 4800,
+        active_addresses: 280,
+        transfer_volume: 5200000,
         country: 'South Africa',
         currency: 'South African Rand',
         currencyCode: 'ZAR',
@@ -75,6 +96,9 @@ const stablecoinData = [
     {
         symbol: 'TRYB',
         supply: 12400000,
+        transaction_count: 22000,
+        active_addresses: 1400,
+        transfer_volume: 35000000,
         country: 'Turkey',
         currency: 'Turkish Lira',
         currencyCode: 'TRY',
@@ -85,6 +109,9 @@ const stablecoinData = [
     {
         symbol: 'MXNe',
         supply: 5600000,
+        transaction_count: 10500,
+        active_addresses: 680,
+        transfer_volume: 16000000,
         country: 'Mexico',
         currency: 'Mexican Peso',
         currencyCode: 'MXN',
@@ -95,6 +122,9 @@ const stablecoinData = [
     {
         symbol: 'VGBP',
         supply: 3200000,
+        transaction_count: 7200,
+        active_addresses: 420,
+        transfer_volume: 9800000,
         country: 'United Kingdom',
         currency: 'British Pound',
         currencyCode: 'GBP',
@@ -105,6 +135,9 @@ const stablecoinData = [
     {
         symbol: 'VCHF',
         supply: 2800000,
+        transaction_count: 6500,
+        active_addresses: 380,
+        transfer_volume: 8400000,
         country: 'Switzerland',
         currency: 'Swiss Franc',
         currencyCode: 'CHF',
@@ -115,6 +148,9 @@ const stablecoinData = [
     {
         symbol: 'VEUR',
         supply: 4500000,
+        transaction_count: 9200,
+        active_addresses: 580,
+        transfer_volume: 13000000,
         country: 'European Union',
         currency: 'Euro',
         currencyCode: 'EUR',
@@ -125,6 +161,9 @@ const stablecoinData = [
     {
         symbol: 'GBPA',
         supply: 1900000,
+        transaction_count: 4500,
+        active_addresses: 270,
+        transfer_volume: 5800000,
         country: 'United Kingdom',
         currency: 'British Pound',
         currencyCode: 'GBP',
@@ -135,6 +174,9 @@ const stablecoinData = [
     {
         symbol: 'EURCV',
         supply: 950000,
+        transaction_count: 2800,
+        active_addresses: 180,
+        transfer_volume: 3100000,
         country: 'European Union',
         currency: 'Euro',
         currencyCode: 'EUR',
@@ -145,6 +187,9 @@ const stablecoinData = [
     {
         symbol: 'KZTE',
         supply: 750000,
+        transaction_count: 2200,
+        active_addresses: 140,
+        transfer_volume: 2500000,
         country: 'Kazakhstan',
         currency: 'Kazakhstani Tenge',
         currencyCode: 'KZT',
@@ -155,12 +200,80 @@ const stablecoinData = [
     {
         symbol: 'AUDD',
         supply: 6200000,
+        transaction_count: 12000,
+        active_addresses: 750,
+        transfer_volume: 18000000,
         country: 'Australia',
         currency: 'Australian Dollar',
         currencyCode: 'AUD',
         flag: '🇦🇺',
         lat: -33.8688,
         lng: 151.2093
+    },
+    {
+        symbol: 'USDC',
+        supply: 7850000000,
+        transaction_count: 52000000,
+        active_addresses: 2500000,
+        transfer_volume: 185000000000,
+        country: 'United States',
+        currency: 'US Dollar',
+        currencyCode: 'USD',
+        flag: '🇺🇸',
+        lat: 37.0902,
+        lng: -95.7129
+    },
+    {
+        symbol: 'USDT',
+        supply: 3200000000,
+        transaction_count: 28000000,
+        active_addresses: 1800000,
+        transfer_volume: 95000000000,
+        country: 'United States',
+        currency: 'US Dollar',
+        currencyCode: 'USD',
+        flag: '🇺🇸',
+        lat: 40.7128,
+        lng: -74.0060
+    },
+    {
+        symbol: 'PYUSD',
+        supply: 425000000,
+        transaction_count: 1850000,
+        active_addresses: 145000,
+        transfer_volume: 12500000000,
+        country: 'United States',
+        currency: 'US Dollar',
+        currencyCode: 'USD',
+        flag: '🇺🇸',
+        lat: 34.0522,
+        lng: -118.2437
+    },
+    {
+        symbol: 'USDС',
+        supply: 125000000,
+        transaction_count: 485000,
+        active_addresses: 38000,
+        transfer_volume: 3200000000,
+        country: 'United States',
+        currency: 'US Dollar',
+        currencyCode: 'USD',
+        flag: '🇺🇸',
+        lat: 41.8781,
+        lng: -87.6298
+    },
+    {
+        symbol: 'USDY',
+        supply: 85000000,
+        transaction_count: 320000,
+        active_addresses: 25000,
+        transfer_volume: 2100000000,
+        country: 'United States',
+        currency: 'US Dollar',
+        currencyCode: 'USD',
+        flag: '🇺🇸',
+        lat: 47.6062,
+        lng: -122.3321
     }
 ];
 
@@ -412,6 +525,9 @@ class GlobeVisualization {
         tooltip.querySelector('.tooltip-country').textContent = `${data.flag} ${data.country}`;
         tooltip.querySelector('.tooltip-symbol').textContent = `${data.symbol} (${data.currency})`;
         tooltip.querySelector('.tooltip-supply').textContent = `Supply: ${formatCurrency(data.supply)}`;
+        tooltip.querySelector('.tooltip-transactions').textContent = `Transactions: ${formatNumber(data.transaction_count)}`;
+        tooltip.querySelector('.tooltip-addresses').textContent = `Active Addresses: ${formatNumber(data.active_addresses)}`;
+        tooltip.querySelector('.tooltip-volume').textContent = `Transfer Volume: ${formatCurrency(data.transfer_volume)}`;
 
         tooltip.style.left = event.clientX + 15 + 'px';
         tooltip.style.top = event.clientY + 15 + 'px';
@@ -470,10 +586,16 @@ function updateStats() {
     const totalSupply = stablecoinData.reduce((sum, coin) => sum + coin.supply, 0);
     const uniqueCurrencies = new Set(stablecoinData.map(c => c.currencyCode)).size;
     const uniqueCountries = new Set(stablecoinData.map(c => c.country)).size;
+    const totalTransactions = stablecoinData.reduce((sum, coin) => sum + coin.transaction_count, 0);
+    const totalAddresses = stablecoinData.reduce((sum, coin) => sum + coin.active_addresses, 0);
+    const totalVolume = stablecoinData.reduce((sum, coin) => sum + coin.transfer_volume, 0);
 
     document.getElementById('total-supply').textContent = formatCurrency(totalSupply);
     document.getElementById('total-currencies').textContent = uniqueCurrencies;
     document.getElementById('total-countries').textContent = uniqueCountries;
+    document.getElementById('total-transactions').textContent = formatNumber(totalTransactions);
+    document.getElementById('total-addresses').textContent = formatNumber(totalAddresses);
+    document.getElementById('total-volume').textContent = formatCurrency(totalVolume);
 }
 
 // Populate Stablecoin Cards
@@ -497,6 +619,20 @@ function populateStablecoinList() {
             <div class="stablecoin-details">
                 <span class="stablecoin-symbol">${coin.symbol}</span>
                 <span class="stablecoin-supply">${formatCurrency(coin.supply)}</span>
+            </div>
+            <div class="stablecoin-metrics">
+                <div class="metric-item">
+                    <span class="metric-label">Transactions</span>
+                    <span class="metric-value">${formatNumber(coin.transaction_count)}</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Active Addresses</span>
+                    <span class="metric-value">${formatNumber(coin.active_addresses)}</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Transfer Volume</span>
+                    <span class="metric-value">${formatCurrency(coin.transfer_volume)}</span>
+                </div>
             </div>
         `;
         container.appendChild(card);
