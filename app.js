@@ -274,6 +274,71 @@ const stablecoinData = [
         flag: '🇺🇸',
         lat: 47.6062,
         lng: -122.3321
+    },
+    {
+        symbol: 'USDS',
+        supply: 180000000,
+        transaction_count: 720000,
+        active_addresses: 52000,
+        transfer_volume: 4800000000,
+        country: 'United States',
+        currency: 'US Dollar',
+        currencyCode: 'USD',
+        flag: '🇺🇸',
+        lat: 42.3601,
+        lng: -71.0589
+    },
+    {
+        symbol: 'USD1',
+        supply: 95000000,
+        transaction_count: 380000,
+        active_addresses: 28000,
+        transfer_volume: 2500000000,
+        country: 'United States',
+        currency: 'US Dollar',
+        currencyCode: 'USD',
+        flag: '🇺🇸',
+        lat: 33.4484,
+        lng: -112.0740
+    },
+    {
+        symbol: 'USDG',
+        supply: 62000000,
+        transaction_count: 245000,
+        active_addresses: 18500,
+        transfer_volume: 1850000000,
+        country: 'United States',
+        currency: 'US Dollar',
+        currencyCode: 'USD',
+        flag: '🇺🇸',
+        lat: 39.7392,
+        lng: -104.9903
+    },
+    {
+        symbol: 'CASH',
+        supply: 48000000,
+        transaction_count: 195000,
+        active_addresses: 14200,
+        transfer_volume: 1400000000,
+        country: 'United States',
+        currency: 'US Dollar',
+        currencyCode: 'USD',
+        flag: '🇺🇸',
+        lat: 30.2672,
+        lng: -97.7431
+    },
+    {
+        symbol: 'JUPUSD',
+        supply: 72000000,
+        transaction_count: 285000,
+        active_addresses: 21000,
+        transfer_volume: 2200000000,
+        country: 'United States',
+        currency: 'US Dollar',
+        currencyCode: 'USD',
+        flag: '🇺🇸',
+        lat: 25.7617,
+        lng: -80.1918
     }
 ];
 
